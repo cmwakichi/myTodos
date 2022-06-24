@@ -25,7 +25,9 @@
                             <li><a href="/todos"
                                 class="rounded p-2 bg-blue-500 hover:bg-green-500 text-white text-sm">View todos</a></li>
                             <li><a href="/todo/create"
-                                   class="rounded p-2 bg-blue-500 hover:bg-green-500 text-white text-sm">Add New todos</a></li>
+                                   class="rounded p-2 bg-blue-500 hover:bg-green-500 text-white text-sm">
+                                    Add New todos
+                                </a></li>
                         </ol>
                     </nav>
                 </div>

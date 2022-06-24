@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-    <div >
+    <div>
         <header
             class="p-4 mb-4 mx-auto bg-blue-500 font-bold text-white
                 text-xl text-center">Todo App
@@ -31,8 +31,7 @@
 
     </div>
     {{ $slot }}
-
-    <div class="w-full p-4 rounded bg-blue-500 text-white-500 text-center mt-10 b-0">
+    <div class="mt-10 w-full p-4 rounded bg-blue-500 text-white-500 text-center mt-10 b-0">
         <footer>
             <p>This App was a project of Caleb Mwakichi</p>
             <address>
