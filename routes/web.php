@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StatusController;
 use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,4 +32,7 @@ Route::middleware('auth')->group(function(){
     Route::delete('todos/{todo}',[TodoController::class,'destroy']);
     Route::get('/todos/{todo}/edit',[TodoController::class,'edit']);
     Route::patch('/todos/{todo}', [TodoController::class, 'update']);
+    Route::get('/status/create',[StatusController::class,'create']);
+    Route::get('/status',[StatusController::class,'index']);
+    Route::post('/status',[StatusController::class,'store']);
 });

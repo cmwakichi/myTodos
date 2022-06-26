@@ -5,7 +5,10 @@
         </x-slot>
         <form method="POST" action="/status">
             @csrf
-            <x-mycomponents.input name="status"/>
+            <x-mycomponents.field>
+                <x-mycomponents.label name="status"/>
+                <x-mycomponents.input name="name"/>
+            </x-mycomponents.field>
 
             <x-mycomponents.button type="submit">Add</x-mycomponents.button>
             <a href="/dashboard">&laquo;Go to dashboard</a>
