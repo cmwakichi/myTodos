@@ -5,7 +5,21 @@
             class="text-white-500 border bg-blue-500 p-1 m-4 text-white">
             Add item</a>
     </div>
-
+    <div x-data="{show:false}" @click.away="show = false" class="text-left ml-4 mt-5">
+        <p>Filter todos based on the status:</p>
+        <button @click="show=!show"
+        class="inline-flex text-sm p-1 font-semibold rounded border border-black-500 rounded w-24">
+            Status
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        <div x-show="show" class="py-2 rounded border border-black-500 p-1 mt-2 w-24" style="display: none">
+            <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">completed</a>
+            <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">pending</a>
+            <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">in-progress</a>
+        </div>
+    </div>
 
     <div class="flex flex-col">
         @if($todos->count() < 1)
