@@ -1,3 +1,3 @@
-<div class="block">
+<div class="block mt-4">
     {{$slot}}
 </div>
