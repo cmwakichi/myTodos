@@ -16,7 +16,7 @@
         </button>
         <div x-show="show" class="py-2 rounded border border-black-500 p-1 mt-2 w-24" style="display: none">
             @foreach($statuses as $status)
-                <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">{{$status->name}}</a>
+                <a href="/statuses/{{$status->id}}" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">{{$status->name}}</a>
             @endforeach
         </div>
     </div>
