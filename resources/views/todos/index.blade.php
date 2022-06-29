@@ -15,9 +15,9 @@
             </svg>
         </button>
         <div x-show="show" class="py-2 rounded border border-black-500 p-1 mt-2 w-24" style="display: none">
-            <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">completed</a>
-            <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">pending</a>
-            <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">in-progress</a>
+            @foreach($statuses as $status)
+                <a href="#" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">{{$status->name}}</a>
+            @endforeach
         </div>
     </div>
 

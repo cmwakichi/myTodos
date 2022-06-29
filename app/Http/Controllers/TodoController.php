@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\status;
 use App\Models\todo;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -15,7 +16,8 @@ class TodoController extends Controller
     }
     public function index(User $user){
         $todos = todo::latest()->paginate(10);
-        return view('todos.index', ['todos'=>$todos]);
+        $statuses = status::all();
+        return view('todos.index', ['todos'=>$todos,'statuses'=>$statuses]);
     }
     public function store(Request $request, todo $todo){
         $this->validate($request,[
