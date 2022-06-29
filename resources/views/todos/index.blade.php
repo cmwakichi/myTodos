@@ -32,7 +32,6 @@
                     <div class=" m-4 p-1 bg-gray-100 flex items-center">
                         <span class="text-sm m-4">{{ $todo->description }}</span>
                         <span class="text-sm m-4">{{$todo->created_at->diffForHumans()}}</span>
-                        <span>
                             <form method="GET" action="/todos/{{$todo->id}}/edit">
                                 @csrf
 
