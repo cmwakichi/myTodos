@@ -13,9 +13,9 @@ class StatusController extends Controller
     }
     public function store(Request $request,status $status){
         $this->validate($request,[
-            'name'=>['required','max:255']
+            'status_id'=>['required','max:255']
         ]);
-        $status->name = $request['name'];
+        $status->name = $request['status-id'];
         $status->save();
         return redirect()->to('/status');
     }

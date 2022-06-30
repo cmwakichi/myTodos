@@ -7,9 +7,12 @@
             @csrf
             <x-mycomponents.input name="description"/>
             <x-mycomponents.field>
-                <select>
-                    <option value="">Choose status</option>
-                    <option value="completed">completed</option>
+                <x-mycomponents.label name="status"/>
+                <select name="status_id" id="status">
+                    <option value="">--select status--</option>
+                    @foreach($statuses as $status)
+                        <option value="{{$status->id}}">{{$status->name}}</option>
+                    @endforeach
                 </select>
             </x-mycomponents.field>
             <x-mycomponents.button type="submit">Add</x-mycomponents.button>

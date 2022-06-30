@@ -16,7 +16,7 @@
         </button>
         <div x-show="show" class="py-2 rounded border border-black-500 p-1 mt-2 w-24" style="display: none">
             @foreach($statuses as $status)
-                <a href="/statuses/{{$status->id}}" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">{{$status->name}}</a>
+                <a href="/statuses/{{$status->name}}" class="pb-1 focus:bg-blue-300 hover:bg-blue-100 block text-sm font-semibold leading-5">{{$status->name}}</a>
             @endforeach
         </div>
     </div>
@@ -31,6 +31,7 @@
                 @if($todo->user_id === auth()->id())
                     <div class=" m-4 p-1 bg-gray-100 flex items-center">
                         <span class="text-sm m-4">{{ $todo->description }}</span>
+                        <span class="text-sm m-4">{{ $todo->status->name }}</span>
                         <span class="text-sm m-4">{{$todo->created_at->diffForHumans()}}</span>
                             <form method="GET" action="/todos/{{$todo->id}}/edit">
                                 @csrf

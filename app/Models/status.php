@@ -9,4 +9,8 @@ class status extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function todos(){
+        return $this->hasMany(todo::class);
+    }
 }
