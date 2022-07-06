@@ -23,4 +23,8 @@ class StatusController extends Controller
         $statuses = status::all();
         return view('status.index',['statuses'=>$statuses]);
     }
+    pubblic function show(status $status){
+        $todos = $status->hasMany();
+        return view('todos.show',['todos', $todos]);
+}
 }

@@ -35,4 +35,5 @@ Route::middleware('auth')->group(function(){
     Route::get('/status/create',[StatusController::class,'create']);
     Route::get('/status',[StatusController::class,'index']);
     Route::post('/status',[StatusController::class,'store']);
+    Route::get('/statuses/{status}', [StatusController::class, 'show']);
 });
