@@ -14,7 +14,7 @@
                 <select name="status_id" id="status">
                     <option value="{{old('status',$todo->status->name)}}">{{$todo->status->name}}</option>
                     @foreach($statuses as $status)
-                        <option value="{{$status->id}}">{{$status->name}}</option>
+                        <option value="{{old('status_id', $status->id)}}">{{$status->name}}</option>
                     @endforeach
                 </select>
             </x-mycomponents.field>
